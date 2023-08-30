@@ -5,10 +5,10 @@ import { Configuration, OpenAIApi } from 'openai-edge'
 import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 })
 
 const openai = new OpenAIApi(configuration)
